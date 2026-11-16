@@ -1,3 +1,6 @@
+def copy_tasks(tasks): return [dict(task) for task in tasks]
+
+
 class TodoList:
     def __init__(self): self._tasks = []
 
@@ -7,4 +10,4 @@ class TodoList:
         self._tasks.append(task)
         return dict(task)
 
-    def all(self): return [dict(task) for task in self._tasks]
+    def all(self): return copy_tasks(self._tasks)
