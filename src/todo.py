@@ -12,10 +12,11 @@ class TodoList:
 
     def all(self): return copy_tasks(self._tasks)
 
-    def complete(self, task_id):
+    def _find(self, task_id):
         if type(task_id) is not int: raise ValueError("Unknown task")
         for task in self._tasks:
             if task["id"] == task_id:
-                task["status"] = "done"
-                return
+                return task
         raise ValueError("Unknown task")
+
+    def complete(self, task_id): self._find(task_id)["status"] = "done"
