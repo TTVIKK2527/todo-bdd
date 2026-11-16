@@ -2,7 +2,7 @@ test_add_creates_open_task_with_stable_id (test_todo.TodoTests.test_add_creates_
 test_completion_changes_only_the_selected_task (test_todo.TodoTests.test_completion_changes_only_the_selected_task) ... ERROR
 test_empty_title_is_rejected (test_todo.TodoTests.test_empty_title_is_rejected) ... ok
 test_returned_data_cannot_mutate_the_task_list (test_todo.TodoTests.test_returned_data_cannot_mutate_the_task_list) ... ok
-test_unknown_id_is_rejected (test_todo.TodoTests.test_unknown_id_is_rejected) ... 
+test_unknown_id_is_rejected (test_todo.TodoTests.test_unknown_id_is_rejected) ...
   test_unknown_id_is_rejected (test_todo.TodoTests.test_unknown_id_is_rejected) (task_id=0) ... ERROR
   test_unknown_id_is_rejected (test_todo.TodoTests.test_unknown_id_is_rejected) (task_id=-1) ... ERROR
   test_unknown_id_is_rejected (test_todo.TodoTests.test_unknown_id_is_rejected) (task_id=2) ... ERROR
