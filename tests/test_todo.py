@@ -3,6 +3,19 @@ from src.todo import TodoList
 
 
 class TodoTests(unittest.TestCase):
+    def test_completion_changes_only_the_selected_task(self):
+        todo = TodoList()
+        todo.add("Water basil")
+        todo.add("Buy soil")
+        todo.complete(1)
+        self.assertEqual([task["status"] for task in todo.all()], ["done", "open"])
+
+    def test_unknown_id_is_rejected(self):
+        todo = TodoList()
+        todo.add("Water basil")
+        for task_id in (0, -1, 2, True, "1"):
+            with self.subTest(task_id=task_id), self.assertRaises(ValueError): todo.complete(task_id)
+
     def test_add_creates_open_task_with_stable_id(self):
         todo = TodoList()
         task = todo.add("  Water basil  ")
