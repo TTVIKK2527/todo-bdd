@@ -1,0 +1,16 @@
+test_add_creates_open_task_with_stable_id (test_todo.TodoTests.test_add_creates_open_task_with_stable_id) ... ok
+test_completion_changes_only_the_selected_task (test_todo.TodoTests.test_completion_changes_only_the_selected_task) ... ok
+test_empty_and_all_done_lists_are_empty (test_todo.TodoTests.test_empty_and_all_done_lists_are_empty) ... ok
+test_empty_title_is_rejected (test_todo.TodoTests.test_empty_title_is_rejected) ... ok
+test_open_list_excludes_completed_tasks (test_todo.TodoTests.test_open_list_excludes_completed_tasks) ... ok
+test_returned_data_cannot_mutate_the_task_list (test_todo.TodoTests.test_returned_data_cannot_mutate_the_task_list) ... ok
+test_unknown_id_is_rejected (test_todo.TodoTests.test_unknown_id_is_rejected) ... ok
+
+----------------------------------------------------------------------
+Ran 7 tests in 0.001s
+
+OK
+PASS: add.feature - The created task is visible
+PASS: complete.feature - A completed task changes status
+PASS: open.feature - Completed tasks are absent from the open list
+PASS: 3 BDD scenarios

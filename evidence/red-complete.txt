@@ -1,0 +1,69 @@
+test_add_creates_open_task_with_stable_id (test_todo.TodoTests.test_add_creates_open_task_with_stable_id) ... ok
+test_completion_changes_only_the_selected_task (test_todo.TodoTests.test_completion_changes_only_the_selected_task) ... ERROR
+test_empty_title_is_rejected (test_todo.TodoTests.test_empty_title_is_rejected) ... ok
+test_returned_data_cannot_mutate_the_task_list (test_todo.TodoTests.test_returned_data_cannot_mutate_the_task_list) ... ok
+test_unknown_id_is_rejected (test_todo.TodoTests.test_unknown_id_is_rejected) ... 
+  test_unknown_id_is_rejected (test_todo.TodoTests.test_unknown_id_is_rejected) (task_id=0) ... ERROR
+  test_unknown_id_is_rejected (test_todo.TodoTests.test_unknown_id_is_rejected) (task_id=-1) ... ERROR
+  test_unknown_id_is_rejected (test_todo.TodoTests.test_unknown_id_is_rejected) (task_id=2) ... ERROR
+  test_unknown_id_is_rejected (test_todo.TodoTests.test_unknown_id_is_rejected) (task_id=True) ... ERROR
+  test_unknown_id_is_rejected (test_todo.TodoTests.test_unknown_id_is_rejected) (task_id='1') ... ERROR
+
+======================================================================
+ERROR: test_completion_changes_only_the_selected_task (test_todo.TodoTests.test_completion_changes_only_the_selected_task)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/DemonessMari/Documents/Codex/2026-11-16/check-kriit-and-continue-with-tasks/todo-bdd/tests/test_todo.py", line 10, in test_completion_changes_only_the_selected_task
+    todo.complete(1)
+    ^^^^^^^^^^^^^
+AttributeError: 'TodoList' object has no attribute 'complete'
+
+======================================================================
+ERROR: test_unknown_id_is_rejected (test_todo.TodoTests.test_unknown_id_is_rejected) (task_id=0)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/DemonessMari/Documents/Codex/2026-11-16/check-kriit-and-continue-with-tasks/todo-bdd/tests/test_todo.py", line 17, in test_unknown_id_is_rejected
+    with self.subTest(task_id=task_id), self.assertRaises(ValueError): todo.complete(task_id)
+                                                                       ^^^^^^^^^^^^^
+AttributeError: 'TodoList' object has no attribute 'complete'
+
+======================================================================
+ERROR: test_unknown_id_is_rejected (test_todo.TodoTests.test_unknown_id_is_rejected) (task_id=-1)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/DemonessMari/Documents/Codex/2026-11-16/check-kriit-and-continue-with-tasks/todo-bdd/tests/test_todo.py", line 17, in test_unknown_id_is_rejected
+    with self.subTest(task_id=task_id), self.assertRaises(ValueError): todo.complete(task_id)
+                                                                       ^^^^^^^^^^^^^
+AttributeError: 'TodoList' object has no attribute 'complete'
+
+======================================================================
+ERROR: test_unknown_id_is_rejected (test_todo.TodoTests.test_unknown_id_is_rejected) (task_id=2)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/DemonessMari/Documents/Codex/2026-11-16/check-kriit-and-continue-with-tasks/todo-bdd/tests/test_todo.py", line 17, in test_unknown_id_is_rejected
+    with self.subTest(task_id=task_id), self.assertRaises(ValueError): todo.complete(task_id)
+                                                                       ^^^^^^^^^^^^^
+AttributeError: 'TodoList' object has no attribute 'complete'
+
+======================================================================
+ERROR: test_unknown_id_is_rejected (test_todo.TodoTests.test_unknown_id_is_rejected) (task_id=True)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/DemonessMari/Documents/Codex/2026-11-16/check-kriit-and-continue-with-tasks/todo-bdd/tests/test_todo.py", line 17, in test_unknown_id_is_rejected
+    with self.subTest(task_id=task_id), self.assertRaises(ValueError): todo.complete(task_id)
+                                                                       ^^^^^^^^^^^^^
+AttributeError: 'TodoList' object has no attribute 'complete'
+
+======================================================================
+ERROR: test_unknown_id_is_rejected (test_todo.TodoTests.test_unknown_id_is_rejected) (task_id='1')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/DemonessMari/Documents/Codex/2026-11-16/check-kriit-and-continue-with-tasks/todo-bdd/tests/test_todo.py", line 17, in test_unknown_id_is_rejected
+    with self.subTest(task_id=task_id), self.assertRaises(ValueError): todo.complete(task_id)
+                                                                       ^^^^^^^^^^^^^
+AttributeError: 'TodoList' object has no attribute 'complete'
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.005s
+
+FAILED (errors=6)
