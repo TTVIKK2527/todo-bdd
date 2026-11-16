@@ -3,6 +3,20 @@ from src.todo import TodoList
 
 
 class TodoTests(unittest.TestCase):
+    def test_open_list_excludes_completed_tasks(self):
+        todo = TodoList()
+        todo.add("Water basil")
+        second = todo.add("Buy soil")
+        todo.complete(1)
+        self.assertEqual(todo.open_tasks(), [second])
+
+    def test_empty_and_all_done_lists_are_empty(self):
+        todo = TodoList()
+        self.assertEqual(todo.open_tasks(), [])
+        todo.add("Water basil")
+        todo.complete(1)
+        self.assertEqual(todo.open_tasks(), [])
+
     def test_completion_changes_only_the_selected_task(self):
         todo = TodoList()
         todo.add("Water basil")
