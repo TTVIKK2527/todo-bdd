@@ -20,3 +20,5 @@ class TodoList:
         raise ValueError("Unknown task")
 
     def complete(self, task_id): self._find(task_id)["status"] = "done"
+
+    def open_tasks(self): return [dict(task) for task in self._tasks if task["status"] == "open"]
